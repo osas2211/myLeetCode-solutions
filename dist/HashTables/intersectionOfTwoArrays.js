@@ -20,7 +20,7 @@ const intersectionOfTwoArrays = (nums1, nums2) => {
     for (let i = 0; i < nums1.length; i++) {
         cache[nums1[i]] = nums1[i];
     }
-    for (let i = 0; i < nums2.length; i++) {
+    for (let i = 0; i < nums1.length; i++) {
         if (cache[nums2[i]] !== undefined) {
             arr.push(cache[nums2[i]]);
         }
@@ -28,5 +28,5 @@ const intersectionOfTwoArrays = (nums1, nums2) => {
     set = makeSet(arr);
     return set;
 };
-const test_ = intersectionOfTwoArrays([4,7,9,7,6,7], [5,0,0,6,1,6,2,2,4]);
+const test_ = intersectionOfTwoArrays([1, 2, 2, 1], [2, 2]);
 console.log(test_);
